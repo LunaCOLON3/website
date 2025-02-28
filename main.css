@@ -1,284 +1,174 @@
-        /* these are variables that are being used in the code
-    these tended to confuse some people, so I only kept 
-    the images as variables */
+body {
+    font-family: 'JetBrains Mono', serif;
+    margin: 10px;
+    background-color: #11111b;
+    color: #fceaff;
+    background-image: conic-gradient(at 5% 5%, transparent 75%, #cba6f7 0),conic-gradient(at 5% 5%, transparent 75%, #cba6f7 0);
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+}
 
-            :root {
-                --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
-                --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
+* {
+    box-sizing: border-box;
+}
 
-                /* colors */
-                --content: #43256E;
-            }
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-            /* if you have the URL of a font, you can set it below */
-            /* feel free to delete this if it's not your vibe */
+#container a {
+    color: #ED64F5;
+    font-weight: bold;
+}
 
-            /* this seems like a lot for just one font and I would have to agree 
-    but I wanted to include an example of how to include a custom font.
-    If you download a font file you can upload it onto your Neocities
-    and then link it! Many fonts have separate files for each style
-    (bold, italic, etc. T_T) which is why there are so many!
-    
-    */
+header {
+    width: 100%;
+    background-color: #5e4e8c;
+    height: 150px;
+    background-size: 100%;
+    border-radius: 10px;
+}
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-            }
+#navbar {
+    height: 50px;
+    background-color: #181825;
+    width: 100%;
+    border-radius: 10px;
+}
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
-                font-weight: bold;
-            }
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
-                font-style: italic;
-            }
+#navbar li {
+    padding-top: 10px;
+}
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
-                font-style: italic;
-                font-weight: bold;
-            }
+#navbar li a {
+    color: #ED64F5;
+    font-weight: 800;
+    text-decoration: none;
+}
 
+#navbar li a:hover {
+    color: #a49cba;
+    text-decoration: underline;
+}
 
-            body {
-                font-family: 'JetBrains Mono', serif;
-                margin: 10px;
-                background-color: #11111b;
-                /* you can delete the line below if you'd prefer to not use an image */
-                color: #fceaff;
-                background-image: conic-gradient(at 5% 5%, transparent 75%, #cba6f7 0),conic-gradient(at 5% 5%, transparent 75%, #cba6f7 0);
-                background-position: 0 0, 50px 50px;
-                background-size: 100px 100px;
-            }
+#headerTitle {
+  font-size: 50px;
+  text-align: center;
+  background-color: #11111b;
+  max-width: 450px;
+  margin: 25px auto;
+}
 
-            * {
-                box-sizing: border-box;
-            }
+#flex {
+    display: flex;
+}
 
+aside {
+    background-color: #1e1e2e;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+    border-radius: 10px;
+    min-height: 70vh;
+}
 
+main {
+    background-color: #1e1e2e;
+    flex: 1;
+    padding: 20px;
+    order: 2;
+    border-radius: 10px;
+    min-height: 70vh;
+}
 
-            /* below this line is CSS for the layout */
+#leftSidebar {
+    order: 1;
+    margin-right: 10px;
+}
 
-            /* this is a CSS comment
-    to uncomment a line of CSS, remove the * and the /
-    before and after the text */
+#rightSidebar {
+    order: 3;
+    margin-left: 10px;
+}
 
+footer {
+    background-color: #181825;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
 
-            /* the "container" is what wraps your entire website */
-            /* if you want something (like the header) to be Wider than
-    the other elements, you will need to move that div outside
-    of the container */
-            #container {
-                max-width: 900px;
-                /* this is the width of your layout! */
-                /* if you change the above value, scroll to the bottom
-      and change the media query according to the comment! */
-                margin: 0 auto;
-                /* this centers the entire page */
-            }
+h1,
+h2,
+h3 {
+    color: #ED64F5;
+}
 
-            /* the area below is for all links on your page
-    EXCEPT for the navigation */
-            #container a {
-                color: #ED64F5;
-                font-weight: bold;
-                /* if you want to remove the underline
-      you can add a line below here that says:
-      text-decoration:none; */
-            }
+h1 {
+    font-size: 25px;
+}
 
-            header {
-                width: 100%;
-                background-color: #5e4e8c;
-                /* header color here! */
-                height: 150px;
-                /* this is only for a background image! */
-                /* if you want to put images IN the header, 
-      you can add them directly to the <div id="header"></div> element! */
-                background-image: var(--header-image);
-                background-size: 100%;
-                border-radius: 10px;
-            }
-            /* navigation section!! */
-            #navbar {
-                height: 50px;
-                background-color: #181825;
-                /* navbar color */
-                width: 100%;
-                border-radius: 10px;
-            }
+strong {
+    color: #ED64F5;
+}
 
-            #navbar ul {
-                display: flex;
-                padding: 0;
-                margin: 0;
-                list-style-type: none;
-                justify-content: space-evenly;
-            }
-
-            #navbar li {
-                padding-top: 10px;
-            }
-
-            /* navigation links*/
-            #navbar li a {
-                color: #ED64F5;
-                /* navbar text color */
-                font-weight: 800;
-                text-decoration: none;
-                /* this removes the underline */
-            }
-
-            /* navigation link when a link is hovered over */
-            #navbar li a:hover {
-                color: #a49cba;
-                text-decoration: underline;
-            }
-
-            #headerTitle {
-              font-size: 50px;
-              text-align: center;
-              background-color: #11111b;
-              max-width: 450px;
-              margin: 25px auto;
-            }
-
-            #flex {
-                display: flex;
-            }
-
-            /* this colors BOTH sidebars
-    if you want to style them separately,
-    create styles for #leftSidebar and #rightSidebar */
-            aside {
-                background-color: #1e1e2e;
-                width: 200px;
-                padding: 20px;
-                font-size: smaller;
-                /* this makes the sidebar text slightly smaller */
-                border-radius: 10px;
-            }
+.box {
+    background-color: #13092D;
+    border: 1px solid #ED64F5;
+    padding: 10px;
+}
 
 
-            /* this is the color of the main content area,
-    between the sidebars! */
-            main {
-                background-color: #1e1e2e;
-                flex: 1;
-                padding: 20px;
-                order: 2;
-                border-radius: 10px;
-            }
+#topBar {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: smaller;
+    background-color: #13092D;
+}
 
-            /* what's this "order" stuff about??
-    allow me to explain!
-    if you're using both sidebars, the "order" value
-    tells the CSS the order in which to display them.
-    left sidebar is 1, content is 2, and right sidebar is 3! */
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+    }
 
-            #leftSidebar {
-                order: 1;
-                margin-right: 10px;
-            }
+    aside {
+        width: 100%;
+        min-height: 0;
+    }
 
-            #rightSidebar {
-                order: 3;
-                margin-left: 10px;
-            }
+    main {
+        order: 2;
+        min-height: 0;
+    }
 
-            footer {
-                background-color: #181825;
-                /* background color for footer */
-                width: 100%;
-                height: 50px;
-                padding: 10px;
-                text-align: center;
-                /* this centers the footer text */
-                border-radius: 10px;
-            }
+    #leftSidebar {
+        order: 1;
+        margin: 0 0 10px;
+    }
 
-            h1,
-            h2,
-            h3 {
-                color: #ED64F5;
-            }
+    #rightSidebar {
+        order: 3;
+        margin: 10px 0 0;
+    }
 
-            h1 {
-                font-size: 25px;
-            }
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}
 
-            strong {
-                /* this styles bold text */
-                color: #ED64F5;
-            }
-
-            /* this is just a cool box, it's the darker colored one */
-            .box {
-                background-color: #13092D;
-                border: 1px solid #ED64F5;
-                padding: 10px;
-            }
-
-            /* CSS for extras */
-
-            #topBar {
-                width: 100%;
-                height: 30px;
-                padding: 10px;
-                font-size: smaller;
-                background-color: #13092D;
-            }
-
-
-            /* BELOW THIS POINT IS MEDIA QUERY */
-
-            /* so you wanna change the width of your page? 
-    by default, the container width is 900px.
-    in order to keep things responsive, take your new height,
-    and then subtrack it by 100. use this new number as the 
-    "max-width" value below
-    */
-
-            @media only screen and (max-width: 800px) {
-                #flex {
-                    flex-wrap: wrap;
-                }
-
-                aside {
-                    width: 100%;
-                }
-
-                /* the order of the items is adjusted here for responsiveness!
-      since the sidebars would be too small on a mobile device.
-      feel free to play around with the order!
-      */
-                main {
-                    order: 2;
-                }
-
-                #leftSidebar {
-                    order: 1;
-                    margin: 0 0 10px;
-                }
-
-                #rightSidebar {
-                    order: 3;
-                    margin: 10px 0 0;
-                }
-
-                #navbar ul {
-                    flex-wrap: wrap;
-                }
-            }
-
-            .pixel-corners,
-.pixel-corners--wrapper {
+.pixel-corners, .pixel-corners--wrapper {
   clip-path: polygon(0px calc(100% - 8px),
     4px calc(100% - 8px),
     4px calc(100% - 4px),
