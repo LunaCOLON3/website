@@ -1,0 +1,279 @@
+body {
+    font-family: 'JetBrains Mono', serif;
+    margin: 10px;
+    background-color: #11111b;
+    color: #fceaff;
+<<<<<<< HEAD
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#background {
+    height: 105vh;
+    width: 105vw;
+    position: absolute;
+    z-index: -1;
+=======
+>>>>>>> 7dae4c1fec2d5b7280457645e468a395aa75bcb4
+    background-image: conic-gradient(at 5% 5%, transparent 75%, #cba6f7 0),conic-gradient(at 5% 5%, transparent 75%, #cba6f7 0);
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#container a {
+    color: #ED64F5;
+    font-weight: bold;
+}
+
+header {
+    width: 100%;
+    background-color: #5e4e8c;
+    height: 150px;
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+#navbar {
+    height: 50px;
+    background-color: #181825;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+#navbar li {
+    padding-top: 10px;
+}
+
+#navbar li a {
+    color: #ED64F5;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    color: #a49cba;
+    text-decoration: underline;
+}
+
+#headerTitle {
+  font-size: 50px;
+  text-align: center;
+  background-color: #11111b;
+  max-width: 450px;
+  margin: 25px auto;
+}
+
+#flex {
+    display: flex;
+}
+
+aside {
+    background-color: #1e1e2e;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+    border-radius: 10px;
+    min-height: 70vh;
+}
+
+main {
+    background-color: #1e1e2e;
+    flex: 1;
+    padding: 20px;
+    order: 2;
+    border-radius: 10px;
+    min-height: 70vh;
+}
+
+#leftSidebar {
+    order: 1;
+    margin-right: 10px;
+}
+
+#rightSidebar {
+    order: 3;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: #181825;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1,
+h2,
+h3 {
+    color: #ED64F5;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+strong {
+    color: #ED64F5;
+}
+
+.box {
+    background-color: #13092D;
+    border: 1px solid #ED64F5;
+    padding: 10px;
+}
+
+
+#topBar {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: smaller;
+    background-color: #13092D;
+}
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+        min-height: 0;
+    }
+
+    main {
+        order: 2;
+        min-height: 0;
+    }
+
+    #leftSidebar {
+        order: 1;
+        margin: 0 0 10px;
+    }
+
+    #rightSidebar {
+        order: 3;
+        margin: 10px 0 0;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}
+
+.pixel-corners, .pixel-corners--wrapper {
+  clip-path: polygon(0px calc(100% - 8px),
+    4px calc(100% - 8px),
+    4px calc(100% - 4px),
+    8px calc(100% - 4px),
+    8px 100%,
+    calc(100% - 8px) 100%,
+    calc(100% - 8px) calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 8px),
+    100% calc(100% - 8px),
+    100% 8px,
+    calc(100% - 4px) 8px,
+    calc(100% - 4px) 4px,
+    calc(100% - 8px) 4px,
+    calc(100% - 8px) 0px,
+    8px 0px,
+    8px 4px,
+    4px 4px,
+    4px 8px,
+    0px 8px);
+  position: relative;
+}
+.pixel-corners {
+  border: 4px solid transparent;
+}
+.pixel-corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.pixel-corners--wrapper .pixel-corners {
+  display: block;
+  clip-path: polygon(4px 8px,
+    8px 8px,
+    8px 4px,
+    calc(100% - 8px) 4px,
+    calc(100% - 8px) 8px,
+    calc(100% - 4px) 8px,
+    calc(100% - 4px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 4px),
+    8px calc(100% - 4px),
+    8px calc(100% - 8px),
+    4px calc(100% - 8px));
+}
+.pixel-corners::after,
+.pixel-corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 8px),
+    4px calc(100% - 8px),
+    4px calc(100% - 4px),
+    8px calc(100% - 4px),
+    8px 100%,
+    calc(100% - 8px) 100%,
+    calc(100% - 8px) calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 8px),
+    100% calc(100% - 8px),
+    100% 8px,
+    calc(100% - 4px) 8px,
+    calc(100% - 4px) 4px,
+    calc(100% - 8px) 4px,
+    calc(100% - 8px) 0px,
+    8px 0px,
+    8px 4px,
+    4px 4px,
+    4px 8px,
+    0px 8px,
+    0px 50%,
+    4px 50%,
+    4px 8px,
+    8px 8px,
+    8px 4px,
+    calc(100% - 8px) 4px,
+    calc(100% - 8px) 8px,
+    calc(100% - 4px) 8px,
+    calc(100% - 4px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 4px),
+    8px calc(100% - 4px),
+    8px calc(100% - 8px),
+    4px calc(100% - 8px),
+    4px 50%,
+    0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ed64f5;
+  display: block;
+  pointer-events: none;
+}
+.pixel-corners::after {
+  margin: -4px;
+}
