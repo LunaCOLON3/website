@@ -70,7 +70,7 @@ header {
 }
 
 #headerTitle {
-  font-size: 50px;
+  font-size: 3em;
   text-align: center;
   background-color: #11111b;
   max-width: 450px;
@@ -126,7 +126,7 @@ h3 {
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 1.5em;
 }
 
 strong {
