@@ -1,10 +1,7 @@
 body {
     font-family: 'JetBrains Mono', serif;
-    margin: 10px;
     background-color: #11111b;
     color: #fceaff;
-    height: 100vh;
-    width: 100vw;
     overflow: hidden;
 }
 
@@ -25,6 +22,7 @@ body {
 #container {
     max-width: 900px;
     margin: 0 auto;
+
 }
 
 #container a {
@@ -45,6 +43,7 @@ header {
     background-color: #181825;
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 #navbar ul {
@@ -117,6 +116,7 @@ footer {
     padding: 10px;
     text-align: center;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 h1,
@@ -148,9 +148,11 @@ strong {
     background-color: #13092D;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-aspect-ratio: 5/6) {
     #flex {
         flex-wrap: wrap;
+        min-height: 70vh;
+        flex-direction: column;
     }
 
     aside {
@@ -160,6 +162,7 @@ strong {
 
     main {
         order: 2;
+        flex: 1 1 100%;
         min-height: 0;
     }
 
