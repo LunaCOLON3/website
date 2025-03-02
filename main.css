@@ -129,6 +129,10 @@ h1 {
     font-size: 1.5em;
 }
 
+h1 a {
+    text-decoration: none;
+}
+
 strong {
     color: #ED64F5;
 }
