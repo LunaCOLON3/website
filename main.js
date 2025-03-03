@@ -1,23 +1,23 @@
 const background = document.getElementById("background");
 
 window.onmousemove = e => {
-  const mouseX = e.clientX,
-        mouseY = e.clientY;
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
   
-  const xDecimal = mouseX / window.innerWidth,
-        yDecimal = mouseY / window.innerHeight;
+  const xDecimal = mouseX / window.innerWidth;
+  const yDecimal = mouseY / window.innerHeight;
   
-  const maxX = background.offsetWidth - window.innerWidth,
-        maxY = background.offsetHeight - window.innerHeight;
+  const maxX = background.offsetWidth - window.innerWidth;
+  const maxY = background.offsetHeight - window.innerHeight;
   
-  const panX = maxX * xDecimal,
-        panY = maxY * yDecimal;
+  const panX = maxX * xDecimal;
+  const panY = maxY * yDecimal;
   
   background.animate({
-    transform: `translate(${panX - 50}px, ${panY - 50}px)`
+    transform: `translate(${panX}px, ${panY}px)`
   }, {
     duration: 4000,
     fill: "forwards",
     easing: "ease"
   })
-}
+};

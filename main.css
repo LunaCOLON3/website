@@ -2,17 +2,22 @@ body {
     font-family: 'JetBrains Mono', serif;
     background-color: #11111b;
     color: #fceaff;
+}
+
+#bg-container {
     overflow: hidden;
 }
 
 #background {
-    height: 105vh;
-    width: 105vw;
-    position: absolute;
+    height: 110vh;
+    width: 110vw;
+    position: fixed;
     z-index: -1;
     background-image: conic-gradient(at 5% 5%, transparent 75%, #cba6f7 0),conic-gradient(at 5% 5%, transparent 75%, #cba6f7 0);
     background-position: 0 0, 50px 50px;
     background-size: 100px 100px;
+    bottom: 0;
+    right: 0;
 }
 
 * {
@@ -22,7 +27,7 @@ body {
 #container {
     max-width: 900px;
     margin: 0 auto;
-
+    overflow: visible;
 }
 
 #container a {
